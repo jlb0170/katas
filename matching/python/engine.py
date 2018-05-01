@@ -122,7 +122,7 @@ class Order:
         return self.dir.other_side()
 
     def __str__(self):
-        return self.__repr__()
+        return repr(self)
     
     def __repr__(self):
         return f'{self.order_id}<{self.dir.name} {self.needs}@{self.price}: {[f.quantity for f in self.fills]}>'
